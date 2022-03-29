@@ -91,4 +91,53 @@ header img {
   box-shadow: 0px 4px 50px -3px rgba(0, 0, 0, 0.22);
 }
 
+.functioning {
+  width: 90%;
+  margin: auto;
+}
+.functioning .tuto {
+  width: 90%;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-start;
+  margin: 10px 0px 10px 10px;
+  background-color: rgba(128, 128, 128, 0.109);
+  border-radius: 15px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+.functioning .tuto p:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  color: white;
+  background-color: #9356DC;
+  padding: 5px 5px 5px 5px;
+  border-radius: 50%;
+  text-align: center;
+  position: relative;
+  left: -8px;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.functioning .tuto p:nth-last-child(1) {
+  margin-left: 0px;
+  color: black;
+  font-weight: 500;
+}
+.functioning .tuto i {
+  margin-left: 5%;
+  width: 10px;
+  text-align: center;
+  margin-right: 10%;
+  color: gray;
+}
+.functioning .tuto-color {
+  background-color: #9256dc2f;
+}
+.functioning .tuto-color i {
+  color: #9356DC;
+}
+
 /*# sourceMappingURL=style.css.map */
