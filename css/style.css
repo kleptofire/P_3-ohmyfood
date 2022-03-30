@@ -60,13 +60,14 @@ header img {
 }
 .business p {
   margin: auto;
-  width: 70%;
+  width: 90%;
   margin-bottom: 20px;
   font-weight: 300;
+  font-size: 1rem;
 }
 .business a {
   display: block;
-  width: 55%;
+  width: 65%;
   margin: auto;
 }
 
@@ -74,7 +75,7 @@ header img {
   margin-top: 16px;
   background: linear-gradient(169deg, #ec1bbe 0%, #9356dc 100%);
   box-shadow: 0px 4px 50px -26px rgba(0, 0, 0, 0.22);
-  padding: 15px 5px 15px 5px;
+  padding: 12px 2px 12px 2px;
   border-radius: 50px;
   opacity: 1;
   transition: 0.5s;
@@ -138,6 +139,110 @@ header img {
 }
 .functioning .tuto-color i {
   color: #9356DC;
+}
+
+.restaurant {
+  width: 100%;
+  margin-top: 40px;
+  background-color: rgba(128, 128, 128, 0.109);
+}
+.restaurant .container-restaurant {
+  width: 90%;
+  margin: auto;
+  padding-top: 30px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+.card .card-picture {
+  height: 160px;
+  position: relative;
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.card .card-picture img {
+  object-fit: cover;
+  width: 105%;
+  height: 140%;
+  position: absolute;
+  top: -40%;
+  left: 0%;
+}
+.card .text-card {
+  margin: auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.card .text-card h3 {
+  margin: auto;
+  font-size: 1rem;
+  margin-top: 15px;
+}
+.card .text-card p {
+  margin: 3px 0 15px 0;
+  font-size: 0.95rem;
+  font-weight: 300;
+}
+
+.card-hearth {
+  fill: transparent;
+  stroke: grey;
+  stroke-width: 10%;
+  cursor: pointer;
+  position: relative;
+  right: 10px;
+}
+.card-hearth svg {
+  overflow: visible;
+  width: 1.2rem;
+  height: 1.4rem;
+}
+.card-hearth path {
+  stroke-dashoffset: 0;
+  stroke-dasharray: 1550;
+  transform-origin: center;
+}
+.card-hearth .hearth-background {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  stroke: none;
+}
+.card-hearth .hearth:hover path {
+  animation: stroke-animation 0.5s ease-in-out forwards;
+}
+.card-hearth .hearth:hover ~ .hearth-background path {
+  animation: fade-animation 0.5s ease-in-out forwards;
+}
+
+@keyframes stroke-animation {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dashoffset: 750;
+  }
+  80% {
+    stroke-dashoffset: 1250;
+    fill: url(#gradient);
+  }
+  100% {
+    stroke-dashoffset: 1550;
+    fill: url(#gradient);
+  }
+}
+@keyframes fade-animation {
+  70% {
+    fill: #9356DC;
+    opacity: 1;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

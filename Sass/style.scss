@@ -3,6 +3,7 @@
 $primary : #9356DC;
 $secondary : #FF79DA;
 $tertiary : #99E2D0;
+$degrade: linear-gradient(169deg, rgba(236,27,190,1) 0%, rgba(147,86,220.1,1) 100%);
 
 body{
     width: 100%;
@@ -65,13 +66,14 @@ header{
     }
     p{
         margin: auto;
-        width: 70%;
+        width: 90%;
         margin-bottom: 20px;
         font-weight: 300;
+        font-size: 1rem;
     }
     a{
         display: block;
-        width: 55%;
+        width: 65%;
         margin: auto;
     }
 }
@@ -81,7 +83,7 @@ header{
     margin-top: 16px;
     background: linear-gradient(169deg, rgba(236,27,190,1) 0%, rgba(147,86,220.1,1) 100%);
     box-shadow: 0px 4px 50px -26px rgba(0,0,0,0.22);
-    padding: 15px 5px 15px 5px;
+    padding: 12px 2px 12px 2px;
     border-radius: 50px;
     opacity: 1;
     transition: 0.5s;
@@ -145,7 +147,120 @@ header{
     .tuto-color{
         background-color: #9256dc2f;
         i{
-            color: #9356DC;
+            color: $primary;
         }
+    }
+}
+
+.restaurant{
+    width: 100%;
+    margin-top: 40px;
+    background-color: rgba(128, 128, 128, 0.109);
+    .container-restaurant{
+        width: 90%;
+        margin: auto;
+        padding-top: 30px;
+    }
+}
+
+.card{
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 15px;
+    .card-picture{
+        height: 160px;
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        img{
+            object-fit: cover;
+            width: 105%;
+            height: 140%;
+            position: absolute;
+            top: -40%;
+            left: 0%;
+        }
+    }
+    .text-card{
+        margin:auto;
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h3{
+            margin: auto;
+            font-size: 1rem;
+            margin-top: 15px;
+        }  
+        p{
+            margin: 3px 0 15px 0;
+            font-size: 0.95rem;
+            font-weight: 300;
+        }      
+    }
+}
+
+
+.card-hearth{
+    fill: transparent;
+    stroke: grey;
+    stroke-width: 10%;
+    cursor: pointer;
+    position: relative;
+    right: 10px;
+    svg{
+        overflow: visible;
+        width: 1.2rem;
+        height: 1.4rem;
+    }
+    path{
+        stroke-dashoffset: 0;
+        stroke-dasharray: 1550;
+        transform-origin: center;
+    }
+    .hearth-background{
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: -1;
+        stroke: none;
+    }
+    .hearth:hover path{
+        animation: stroke-animation 0.5s ease-in-out forwards;
+    }
+    .hearth:hover ~ .hearth-background path{
+        animation: fade-animation 0.5s ease-in-out forwards;
+    }
+
+}
+
+@keyframes stroke-animation {
+    0%{
+        stroke-dashoffset:0;
+    }
+    50%{
+        stroke-dashoffset: 750;
+        
+    }
+    80%{
+        stroke-dashoffset: 1250;
+        fill: url(#gradient) ;
+
+    }
+    100%{
+        stroke-dashoffset:1550;
+        fill: url(#gradient);
+    }   
+
+}
+
+@keyframes fade-animation  {
+    70%{
+        fill:$primary;
+        opacity: 1;
+    }
+    80%{
+
     }
 }
