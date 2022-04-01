@@ -29,10 +29,48 @@ header{
     margin-top: 20px;
     padding-bottom: 15px ;
     box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.36);
+    position: relative;
+    i{
+        position: absolute;
+        font-size: 1.5rem;
+        color: #383838;
+        left: 30px;
+        top: 5px;
+    }
     img{
         width: 50%;
     }
 }
+
+main{
+    width: 100%;
+    position: relative;
+}
+.menu{
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: whitesmoke;
+    position: relative;
+    top: -20px;
+    width: 100%;
+    margin: auto;
+    
+}
+
+.background-img{
+    width: 100%;
+    height:250px;
+    position: relative;
+    overflow: hidden;
+    img{
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 110%;
+
+    }
+}
+
 
 .location{
     background-color: rgba(128, 128, 128, 0.2);
@@ -166,26 +204,38 @@ header{
 
 .card{
     background-color: white;
-    border-radius: 10px;
+    border-radius: 15px;
     margin-top: 15px;
     .card-picture{
-        height: 160px;
+        height: 185px;
         position: relative;
         overflow: hidden;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
         img{
             object-fit: cover;
-            width: 105%;
-            height: 140%;
+            width: 100%;
+            height: 135%;
             position: absolute;
-            top: -40%;
-            left: 0%;
+            top: -35%;
+            right: 0%;
+        }
+        p{
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            margin: 0;
+            background-color: $tertiary;
+            color: rgba(0, 0, 0, 0.511);
+            font-weight: 500;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 5%;
         }
     }
     .text-card{
         margin:auto;
-        width: 90%;
+        width: 93%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -193,11 +243,13 @@ header{
             margin: auto;
             font-size: 1rem;
             margin-top: 15px;
+            color: black;
         }  
         p{
             margin: 3px 0 15px 0;
             font-size: 0.95rem;
             font-weight: 300;
+            color: black;
         }      
     }
 }
@@ -260,13 +312,14 @@ header{
 
 }
 
+
 footer{
     background-color: #383838;
     width: 100%;
     padding-top: 20px;
     padding-bottom: 25px;
     .container-footer{
-        width: 85%;
+        width: 90%;
         margin: auto;
     }
     h4{
@@ -296,3 +349,170 @@ footer{
     }
 
 }
+
+//template
+
+
+
+
+.menu{
+    .menu-restaurant{
+        width: 90%;
+        margin: auto;
+        padding-bottom: 40px;
+        .header-menu{
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            padding-top: 10px;
+            h1{
+                font-family: 'Shrikhand', cursive;
+                font-size: 1.7rem;
+                
+            }
+        }
+        .btn{
+            width: 50%;
+            text-align: center;
+            margin: auto;
+            margin-top: 30px;
+        }
+    }
+    
+}
+
+
+.corp-menu{
+    h2{
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin-bottom: 5px;
+    }
+    .underline{
+        background-color: $tertiary;
+        width: 14%;
+        height: 4px;
+    }
+    
+}
+
+.card-menu{
+    position: relative;
+    color: black;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: white;
+    border-radius: 15px;
+    margin-top: 15px;
+    width: 100%;
+    .card-text{
+        display: block;
+        padding: 7px 0px 7px 7px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+       .text{
+            width: 100%;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+        h3, p{
+            
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            margin: 1px;
+        }
+        h3{
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        p{
+            font-size: 1rem;
+            font-weight: 300;
+            margin-bottom: 0px;
+            overflow: hidden;
+
+        }
+        .price{
+            position: relative;
+            padding-right: 10px;
+            p{
+                font-weight: 500;
+            }
+        }
+        
+        
+    }
+    
+    
+    .card-check{
+        display: none;
+        background-color: #99E2D0;
+        height: 100%;
+        position :absolute;
+        right: 0px;
+        padding: 0px 17px;
+        transform-origin: right;
+        
+        border-top-right-radius: 10px;
+        border-bottom-right-radius:10px ;
+        transition: right 0.5s ease-in-out;
+        i{
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.8 ;
+           
+        }
+    }
+
+   
+    
+
+}
+.card-menu:hover{
+    .price{
+        padding-right: 20%;
+        transition: 00.5s ease-in-out;
+    }
+    .card-check{
+        display: flex;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        animation: slide-left 0.5s ease-in-out ;
+        i{
+            animation: myrotate 0.5s ease-in-out;
+        }
+    }
+   
+    
+
+}
+@keyframes slide-left {
+    0% {
+
+     transform: scaleX(0);
+    }
+    100% {
+      
+        transform: scaleX(-50px);
+    }
+  }
+
+@keyframes myrotate {
+    0%{
+        transform: rotate(0deg);
+    }    
+    100%{
+        transform: rotate(359deg);
+    }
+}
+
+
+
