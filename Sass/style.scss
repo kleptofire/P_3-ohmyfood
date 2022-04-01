@@ -156,6 +156,7 @@ header{
     width: 100%;
     margin-top: 40px;
     background-color: rgba(128, 128, 128, 0.109);
+    padding-bottom: 60px;
     .container-restaurant{
         width: 90%;
         margin: auto;
@@ -205,7 +206,7 @@ header{
 .card-hearth{
     fill: transparent;
     stroke: grey;
-    stroke-width: 10%;
+    stroke-width: 8%;
     cursor: pointer;
     position: relative;
     right: 10px;
@@ -235,32 +236,63 @@ header{
 
 }
 
+
 @keyframes stroke-animation {
     0%{
         stroke-dashoffset:0;
     }
     50%{
         stroke-dashoffset: 750;
+        transform: scale(1);
         
     }
     80%{
         stroke-dashoffset: 1250;
         fill: url(#gradient) ;
+        transform: scale(1.1);
 
     }
     100%{
         stroke-dashoffset:1550;
         fill: url(#gradient);
+        transform: scale(1.1);
     }   
 
 }
 
-@keyframes fade-animation  {
-    70%{
-        fill:$primary;
-        opacity: 1;
+footer{
+    background-color: #383838;
+    width: 100%;
+    padding-top: 20px;
+    padding-bottom: 25px;
+    .container-footer{
+        width: 85%;
+        margin: auto;
     }
-    80%{
+    h4{
+        font-family: 'Shrikhand', cursive;
+        color: white;
+        margin: 5px 0px 10px 0px;
+        font-size: 1.2rem;
+    }
+    .footer-grid{
+        display: grid ;
+        grid-template-columns: 20px 1fr;
+        grid-template-rows: 1fr ;
+        align-items: baseline;
+        p{
+            margin: 4px 0px 4px;
+        }
+    }
+    a{
+        font-size: 0.95rem;
+        font-weight: 500;
+    }
+    p{
+        margin: 5px 0px 5px 0px;
+    }
+    i{
+        font-size: 0.8rem;
+    }
 
-    }
 }
