@@ -50,6 +50,7 @@ main{
     border-top-right-radius: 25px;
     border-top-left-radius: 25px;
     background-color: whitesmoke;
+    padding-bottom: 40px;
     position: relative;
     top: -20px;
     width: 100%;
@@ -353,13 +354,15 @@ footer{
 //template
 
 
-
+.main-menu{
+    background-color: whitesmoke;
+}
 
 .menu{
     .menu-restaurant{
         width: 90%;
         margin: auto;
-        padding-bottom: 40px;
+        padding-bottom: 10px;
         .header-menu{
             display: flex;
             align-items: baseline;
