@@ -386,6 +386,7 @@ footer{
 
 
 .corp-menu{
+
     h2{
         font-size: 1.3rem;
         font-weight: 300;
@@ -409,6 +410,7 @@ footer{
     border-radius: 15px;
     margin-top: 15px;
     width: 100%;
+    box-shadow: 1px 2px 29px -14px rgba(0,0,0,0.52);
     .card-text{
         display: block;
         padding: 7px 0px 7px 7px;
@@ -461,16 +463,17 @@ footer{
         right: 0px;
         padding: 0px 17px;
         transform-origin: right;
-        
         border-top-right-radius: 10px;
         border-bottom-right-radius:10px ;
         transition: right 0.5s ease-in-out;
+        
+        
         i{
             text-align: center;
             color: white;
             font-size: 1.5rem;
-            transition: transform 0.8 ;
-           
+            transition: transform 0.8s ;
+            transition: animation 0.5s;
         }
     }
 
@@ -498,12 +501,12 @@ footer{
 
 }
 @keyframes slide-left {
-    0% {
-
+     from{
+    
      transform: scaleX(0);
     }
-    100% {
-      
+    to {
+        
         transform: scaleX(-50px);
     }
   }
@@ -515,6 +518,22 @@ footer{
     100%{
         transform: rotate(359deg);
     }
+}
+
+@keyframes slideDown {
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card-menu{
+    transition: 0.5s;
+    animation: slideDown 1s;
 }
 
 

@@ -376,6 +376,7 @@ footer i {
   border-radius: 15px;
   margin-top: 15px;
   width: 100%;
+  box-shadow: 1px 2px 29px -14px rgba(0, 0, 0, 0.52);
 }
 .card-menu .card-text {
   display: block;
@@ -431,7 +432,8 @@ footer i {
   text-align: center;
   color: white;
   font-size: 1.5rem;
-  transition: transform 0.8;
+  transition: transform 0.8s;
+  transition: animation 0.5s;
 }
 
 .card-menu:hover .price {
@@ -450,10 +452,10 @@ footer i {
 }
 
 @keyframes slide-left {
-  0% {
+  from {
     transform: scaleX(0);
   }
-  100% {
+  to {
     transform: scaleX(-50px);
   }
 }
@@ -464,6 +466,20 @@ footer i {
   100% {
     transform: rotate(359deg);
   }
+}
+@keyframes slideDown {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.card-menu {
+  transition: 0.5s;
+  animation: slideDown 1s;
 }
 
 /*# sourceMappingURL=style.css.map */
