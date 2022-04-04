@@ -5,7 +5,213 @@ $secondary : #FF79DA;
 $tertiary : #99E2D0;
 $degrade: linear-gradient(169deg, rgba(236,27,190,1) 0%, rgba(147,86,220.1,1) 100%);
 
+.loading{
+    position: absolute;
+    opacity:0;
+    top:-20px; 
+    display :flex;
+    justify-content:center;
+    align-items:center;
+    min-height:120vh;
+    width: 100%;
+    background: linear-gradient(to top left, #9356dc -1%, #ff79da 100%);
+    animation:opacity-o 10s forwards;
+  }
+  
+  .glass{
+    position: relative;
+    width:200px;
+    height:300px;
+    background:rgba(255,255,255,0.1);
+    border-radius : 20px 20px 15px 15px; 
+    border: 8px solid transparent ;
+    transform-origin:bottom center;
+    animation: anim-balance 5s linear infinite;
+    
+  }
+  @keyframes opacity-o{
+    0%{
+      opacity:1;
+      display: flex;
+      //height: 1000px;
+    }
+    50%{
+      opacity:1;
+      display: flex;
+      //height: 1000px;
+    }
+    100%{
+      opacity:0;
+      display: none;
+      //height: 0px;
+    }
+    
+  }
+  @keyframes anim-balance{
+    0%{
+      transform:rotate(0deg);
+    }
+    25%{
+      transform:rotate(15deg);
+    }
+    50%{
+      transform:rotate(0deg);
+    }
+    75%{
+      transform:rotate(-15deg);
+    }
+    100%{
+      transform:rotate(0deg);
+    }
+    
+  }
+ 
+  .glass::before{
+    content:'';
+    position :absolute;
+    top:-9.3%;
+    left: -4%;
+    translate: translateX(-50%); 
+    width:87%;
+    height: 30px;
+    border:19px solid rgba(255,255,255,0.5);
+    border-radius: 50%;
+    box-shadow : 0px 5px  rgba(34,34,34,0.5242471988795518);  
+  }
+  
+  .glass::after{
+    content:'';
+    position:absolute;
+    top:20%;
+    right:0;
+    width: 80px;
+    height: 200px; 
+    background: rgba(255,255,255,0.05);
+    border-radius:70%;
+  }
+  
+  .big-grad3{
+    position: absolute;
+    background-color:black;
+    width:40%;
+    height:3px;
+    top:40%;
+    left:2.5%;
+  }
+  .grad3{
+     position: absolute;
+    background-color:black;
+    width:20%;
+    height:3px;
+    top:50%;
+    left:2.5%;
+  }
+  .big-grad2{
+    position: absolute;
+    background-color:black;
+    width:40%;
+    height:3px;
+    top:60%;
+    left:2.5%;
+  }
+  .grad2{
+     position: absolute;
+    background-color:black;
+    width:20%;
+    height:3px;
+    top:70%;
+    left:2.5%;
+  }
+  .big-grad{
+    position: absolute;
+    background-color:black;
+    width:40%;
+    height:3px;
+    top:80%;
+    left:2.5%;
+  }
+  .grad{
+    position: absolute;
+    background-color:black;
+    width:20%;
+    height:3px;
+    top:90%;
+    left:2.5%;
+  }
+  
+  .liquid{
+    
+    position:absolute;
+    top:30%;
+    left:5px;
+    right:5px;
+    bottom:5px;
+    background: #99E2D0;  
+    border-radius: 0px 0px 10px 10px;
+    transform-origin:top center;
+    filter:drop-shadow(0 0 60px #99E2D0);
+    //animation: anim-liquid 5s linear infinite;
+    animation: loading 5s ease-in-out 1;
+  }
+  @keyframes loading{
+    0%{
+      top:100%;
+    }
+    50%{
+      top:70%
+    }
+    100%{
+      top:30%;
+    }
+  }
+  @keyframes anim-liquid{
+      0%{
+      transform:rotate(0deg);
+    }
+      25%{
+      transform:rotate(15deg);
+    }
+      50%{
+      transform:rotate(0deg);
+    }
+      75%{
+      transform:rotate(-15deg);
+    }
+      100%{
+      transform:rotate(0deg);
+    }
+  }
+  
+  
+  .liquid::after{
+    content:'';
+    position:absolute;
+    top:-10px;
+    width:100%;
+    height:20px;
+    background:#6B9E91;
+    border-radius:50%;
+    filter:drop-shadow(0 0 60px #99E2D0);
+  }
+
+#page{
+    animation: slide 10s;
+}
+@keyframes slide {
+    0%{
+        transform: translateY(1000px);
+    }
+    50%{
+        transform: translateY(1000px);
+    }
+    100%{
+        transform: translate(0px);
+    }
+}
+
+
 body{
+    
     width: 100%;
     padding: 0;
     margin: 0;
@@ -29,7 +235,7 @@ header{
     margin-top: 20px;
     padding-bottom: 15px ;
     box-shadow: 0px 4px 5px -2px rgba(0,0,0,0.36);
-    position: relative;
+    //position: relative;
     i{
         position: absolute;
         font-size: 1.5rem;
@@ -502,11 +708,9 @@ footer{
 }
 @keyframes slide-left {
      from{
-    
-     transform: scaleX(0);
+        transform: scaleX(0);
     }
     to {
-        
         transform: scaleX(-50px);
     }
   }
@@ -537,4 +741,4 @@ footer{
 }
 
 
-
+//vers doseur qui ce rempli, chargement
