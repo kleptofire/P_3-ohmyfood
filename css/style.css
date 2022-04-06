@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&family=Shrikhand&display=swap");
 .loading {
-  position: absolute;
+  position: fixed;
+  z-index: 7;
   opacity: 0;
   top: -20px;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 120vh;
   width: 100%;
-  background: linear-gradient(to top left, #9356dc -1%, #ff79da 100%);
-  animation: opacity-o 10s forwards;
+  background: #cf88ff;
+  animation: opacity-o 1s forwards;
 }
 
 .glass {
@@ -25,15 +27,17 @@
 @keyframes opacity-o {
   0% {
     opacity: 1;
-    height: 1000px;
+    display: flex;
   }
   50% {
     opacity: 1;
-    height: 1000px;
+    display: flex;
+    height: 120vh;
   }
   100% {
     opacity: 0;
-    height: 0px;
+    display: none;
+    height: 0vh;
   }
 }
 @keyframes anim-balance {
@@ -155,23 +159,6 @@
     top: 30%;
   }
 }
-@keyframes anim-liquid {
-  0% {
-    transform: rotate(0deg);
-  }
-  25% {
-    transform: rotate(15deg);
-  }
-  50% {
-    transform: rotate(0deg);
-  }
-  75% {
-    transform: rotate(-15deg);
-  }
-  100% {
-    transform: rotate(0deg);
-  }
-}
 .liquid::after {
   content: "";
   position: absolute;
@@ -183,21 +170,6 @@
   filter: drop-shadow(0 0 60px #99E2D0);
 }
 
-#page {
-  animation: slide 10s;
-}
-
-@keyframes slide {
-  0% {
-    transform: translateY(1000px);
-  }
-  50% {
-    transform: translateY(1000px);
-  }
-  100% {
-    transform: translate(0px);
-  }
-}
 body {
   width: 100%;
   padding: 0;
@@ -227,39 +199,22 @@ header i {
   font-size: 1.5rem;
   color: #383838;
   left: 30px;
-  top: 5px;
+  top: 26px;
 }
-header img {
-  width: 50%;
+header h1 {
+  font-family: "Shrikhand", cursive;
+  margin: 0;
+  font-size: 2.1rem;
 }
 
+@media all and (min-width: 800px) {
+  header h1 {
+    font-size: 2.7rem;
+  }
+}
 main {
   width: 100%;
   position: relative;
-}
-
-.menu {
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
-  background-color: whitesmoke;
-  padding-bottom: 40px;
-  position: relative;
-  top: -20px;
-  width: 100%;
-  margin: auto;
-}
-
-.background-img {
-  width: 100%;
-  height: 250px;
-  position: relative;
-  overflow: hidden;
-}
-.background-img img {
-  position: absolute;
-  object-fit: cover;
-  width: 100%;
-  height: 110%;
 }
 
 .location {
@@ -279,6 +234,24 @@ main {
   margin-right: 0px;
 }
 
+@media all and (min-width: 800px) {
+  .location a {
+    width: 30%;
+    margin: auto;
+    font-size: 1.3rem;
+  }
+}
+@media all and (min-width: 800px) {
+  .location a {
+    justify-content: center;
+    width: 30%;
+    margin: auto;
+    font-size: 1.3rem;
+  }
+  .location a p {
+    margin-left: 15px;
+  }
+}
 .business {
   background-color: rgba(128, 128, 128, 0.109);
   padding-top: 30px;
@@ -306,6 +279,13 @@ main {
   margin: auto;
 }
 
+@media all and (min-width: 800px) {
+  .business a {
+    width: 40%;
+    margin: auto;
+    font-size: 1.2rem;
+  }
+}
 .btn {
   margin-top: 16px;
   background: linear-gradient(169deg, #ec1bbe 0%, #9356dc 100%);
@@ -324,7 +304,7 @@ main {
 
 .btn:hover {
   opacity: 0.8;
-  box-shadow: 0px 4px 50px -3px rgba(0, 0, 0, 0.22);
+  box-shadow: 2px 4px 50px -3px rgba(0, 0, 0, 0.32);
 }
 
 .functioning {
@@ -376,6 +356,33 @@ main {
   color: #9356DC;
 }
 
+@media all and (min-width: 800px) {
+  .container-tuto {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container-tuto .tuto {
+    width: 45%;
+    margin-left: 25px;
+  }
+}
+@media all and (min-width: 980px) {
+  .container-tuto {
+    margin: auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .container-tuto .tuto {
+    width: 25%;
+    margin-left: 25px;
+  }
+}
 .restaurant {
   width: 100%;
   margin-top: 40px;
@@ -440,6 +447,31 @@ main {
   color: black;
 }
 
+@media all and (min-width: 800px) {
+  .container-card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    column-gap: 15px;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+@media all and (min-width: 980px) {
+  .container-card {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: auto;
+    column-gap: 15px;
+  }
+
+  .card {
+    width: 23%;
+  }
+}
 .card-hearth {
   fill: transparent;
   stroke: grey;
@@ -527,6 +559,30 @@ footer i {
   font-size: 0.8rem;
 }
 
+.menu {
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  background-color: whitesmoke;
+  padding-bottom: 40px;
+  position: relative;
+  top: -20px;
+  width: 100%;
+  margin: auto;
+}
+
+.background-img {
+  width: 100%;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.background-img img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 110%;
+}
+
 .main-menu {
   background-color: whitesmoke;
 }
@@ -564,6 +620,20 @@ footer i {
   height: 4px;
 }
 
+@media all and (min-width: 1100px) {
+  .corp-menu h2 {
+    font-size: 1.5rem;
+  }
+  .corp-menu .underline {
+    width: 3%;
+  }
+
+  .container-card2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 15px;
+  }
+}
 .card-menu {
   position: relative;
   color: black;
@@ -610,21 +680,23 @@ footer i {
 .card-menu .card-text .price {
   position: relative;
   padding-right: 10px;
+  transition: padding 0.4s linear;
 }
 .card-menu .card-text .price p {
   font-weight: 500;
 }
 .card-menu .card-check {
-  display: none;
   background-color: #99E2D0;
   height: 100%;
   position: absolute;
   right: 0px;
   padding: 0px 17px;
-  transform-origin: right;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
-  transition: right 0.5s ease-in-out;
+  transition: transform 0.5s;
+  transform: translateX(70px);
+  display: flex;
+  align-items: center;
 }
 .card-menu .card-check i {
   text-align: center;
@@ -636,25 +708,28 @@ footer i {
 
 .card-menu:hover .price {
   padding-right: 20%;
-  transition: 0.5s ease-in-out;
 }
 .card-menu:hover .card-check {
-  display: flex;
-  text-align: center;
-  justify-content: center;
+  transform: translateX(0px);
   align-items: center;
-  animation: slide-left 0.5s ease-in-out;
 }
 .card-menu:hover .card-check i {
   animation: myrotate 0.5s ease-in-out;
 }
 
-@keyframes slide-left {
-  from {
-    transform: scaleX(0);
+@media all and (min-width: 900px) {
+  .card-menu:hover .price {
+    padding-right: 12%;
   }
-  to {
-    transform: scaleX(-50px);
+}
+@media all and (max-width: 700px) {
+  .card-menu:hover .price {
+    padding-right: 15%;
+  }
+}
+@media all and (max-width: 420px) {
+  .card-menu:hover .price {
+    padding-right: 20%;
   }
 }
 @keyframes myrotate {
@@ -677,7 +752,24 @@ footer i {
 }
 .card-menu {
   transition: 0.5s;
-  animation: slideDown 1s;
+  animation: slideDown 1s forwards;
+  animation-delay: 0.5s;
+}
+
+.s1 {
+  animation-delay: 0.2s;
+}
+
+.s2 {
+  animation-delay: 0.4s;
+}
+
+.s3 {
+  animation-delay: 0.6s;
+}
+
+.s4 {
+  animation-delay: 0.8s;
 }
 
 /*# sourceMappingURL=style.css.map */
