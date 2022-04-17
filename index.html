@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,8 +9,9 @@
     <script src="https://kit.fontawesome.com/a4032cc44c.js" crossorigin="anonymous"></script>
     <title>Ohmyfood</title>
 </head>
+
 <body>
-    <section class="loading">
+    <div class="loading">
         <div class="glass">
             <div class="angle"></div>
             <div class="liquid"></div>
@@ -20,154 +22,148 @@
             <div class="big-grad"></div>
             <div class="grad"></div>
         </div>
-      </section>
+    </div>
     <div id="page">
         <header>
             <h1>ohmyfood</h1>
         </header>
-    
-        <article class="location">
-            <a href="#">
-                <i class="fa-solid fa-location-dot"></i>
-                <p>Paris, Belleville</p>
-            </a>
-        </article>
-        <article class="business">
-            <h1>Réservez le menu qui vous convient</h1>
-            <p>Découvrez des restaurant d'exception, séléctionné par nos soins</p>
-            <a href="#link-restaurant">
-                <div class="btn">
-                    Explorer nos restaurant
-                </div>
-            </a>
-        </article>
-        <article class="functioning">
-            <h1>Fonctionnement</h1>
-            <div class="container-tuto">
-                <div class="tuto">
-                    <p>1</p> 
-                    <i class="fa-solid fa-mobile-screen"></i>
-                    <p>Choississez un restaurant</p>
-                    
-                </div>
-                <div class="tuto">
-                    <p>2</p>
-                    <i class="fa-solid fa-list-ul"></i>
-                    <p>Composez votre menu</p>
-                    
-                </div>
-                <div class="tuto tuto-color">
-                    <p>3</p>
-                    <i class="fa-solid fa-store"></i>
-                    <p>Déguster au restaurant</p>
-                </div>
+        <main>
+            <div class="location">
+                <form action="location.html">
+                    <label><i class="fa-solid fa-location-dot"></i></label>
+                    <input type="text" name="location" value="Paris, Belleville">
+                </form>
             </div>
-        </article>
-        <article class="restaurant">
-            <div class="container-restaurant">
-                <h1>RESTAURANTS</h1>
-                <div class="container-card" id="link-restaurant">
-                    <a href="pallettedugout.html">
-                        <div class="card">
-                            <div class="card-picture">
-                                <img src="Assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="La palette du goût">
-                                <p>Nouveau</p>
-                            </div>
-                            <div class="text-card">
-                                <div class="card-text">
-                                    <h3>La palette du goût</h3>
-                                    <p>Ménilmontant</p>
-                                </div>
-                                <div class="card-hearth">
-                                    <a href="#">
-                                        <svg class="hearth" viewBox="0 0 512 512" width="20" title="heart">
-                                            <linearGradient id="gradient" x2="1" y2="1">
-                                                <stop offset="0%" stop-color="#FF79DA" />
-                                                <stop offset="100%" stop-color="#9356DC" />
-                                            </linearGradient>
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="noteenchantée.html">
-                        <div class="card">
-                            <div class="card-picture">
-                                <img src="Assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantée">
-                                <p>Nouveau</p>
-                            </div>
-                            <div class="text-card">
-                                <div class="card-text">
-                                    <h3>La note enchantée</h3>
-                                    <p>Charonne</p>
-                                </div>
-                                <div class="card-hearth">
-                                    <a href="">
-                                        <svg class="hearth" viewBox="0 0 512 512" width="20" title="heart">
-                                            <linearGradient id="gradient" x2="1" y2="1">
-                                                <stop offset="0%" stop-color="#FF79DA" />
-                                                <stop offset="100%" stop-color="#9356DC" />
-                                            </linearGradient>
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="lafrançaise.html">
-                        <div class="card">
-                            <div class="card-picture">
-                                <img src="Assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="à la française">
-                            </div>
-                            <div class="text-card">
-                                <div class="card-text">
-                                    <h3>À la française</h3>
-                                    <p>Cité rouge</p>
-                                </div>
-                                <div class="card-hearth">
-                                    <a href="">
-                                        <svg class="hearth" viewBox="0 0 512 512" width="20" title="heart">
-                                            <linearGradient id="gradient" x2="1" y2="1">
-                                                <stop offset="0%" stop-color="#FF79DA" />
-                                                <stop offset="100%" stop-color="#9356DC" />
-                                            </linearGradient>
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                    <a href="délicesdessens.html">
-                        <div class="card">
-                            <div class="card-picture">
-                                <img src="Assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="le délice des sens"  >
-                            </div>
-                            <div class="text-card">
-                                <div class="card-text">
-                                    <h3>Le délices des sens</h3>
-                                    <p>Folie-Méricourt</p>
-                                </div>
-                                <div class="card-hearth">
-                                    <a href="">
-                                        <svg class="hearth" viewBox="0 0 512 512" width="20" title="heart">
-                                            <linearGradient id="gradient" x2="1" y2="1">
-                                                <stop offset="0%" stop-color="#FF79DA" />
-                                                <stop offset="100%" stop-color="#9356DC" />
-                                            </linearGradient>
-                                            <path d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
-                                        </svg>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
+            <section class="business">
+                <h2>Réservez le menu qui vous convient</h2>
+                <p>Découvrez des restaurant d'exception, séléctionné par nos soins</p>
+                <a href="#link-restaurant">
+                    <div class="btn">
+                        Explorer nos restaurant
+                    </div>
+                </a>
+            </section>
+            <section class="functioning">
+                <h2>Fonctionnement</h2>
+                <div class="container-tuto">
+                    <div class="tuto">
+                        <p>1</p>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        <p>Choississez un restaurant</p>
+
+                    </div>
+                    <div class="tuto">
+                        <p>2</p>
+                        <i class="fa-solid fa-list-ul"></i>
+                        <p>Composez votre menu</p>
+
+                    </div>
+                    <div class="tuto tuto-color">
+                        <p>3</p>
+                        <i class="fa-solid fa-store"></i>
+                        <p>Déguster au restaurant</p>
+                    </div>
                 </div>
-            </div>
-        </article>
+            </section>
+            <section class="restaurant">
+                <div class="container-restaurant">
+                    <h2>RESTAURANTS</h2>
+                    <article class="container-card" id="link-restaurant">
+                        <a href="pallettedugout.html">
+                            <div class="card">
+                                <div class="card-picture">
+                                    <img src="Assets/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+                                        alt="La palette du goût">
+                                    <p>Nouveau</p>
+                                </div>
+                                <div class="text-card">
+                                    <div class="card-text">
+                                        <h3>La palette du goût</h3>
+                                        <p>Ménilmontant</p>
+                                    </div>
+                                    <div class="card-hearth">
+
+                                        <svg class="hearth" viewBox="0 0 512 512" width="20">
+                                            <linearGradient id="gradient" x2="1" y2="1">
+                                                <stop offset="0%" stop-color="#FF79DA" />
+                                                <stop offset="100%" stop-color="#9356DC" />
+                                            </linearGradient>
+                                            <path
+                                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="noteenchantée.html">
+                            <div class="card">
+                                <div class="card-picture">
+                                    <img src="Assets/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="la note enchantée">
+                                    <p>Nouveau</p>
+                                </div>
+                                <div class="text-card">
+                                    <div class="card-text">
+                                        <h3>La note enchantée</h3>
+                                        <p>Charonne</p>
+                                    </div>
+                                    <div class="card-hearth">
+
+                                        <svg class="hearth" viewBox="0 0 512 512" width="20">
+                                            <path
+                                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="lafrançaise.html">
+                            <div class="card">
+                                <div class="card-picture">
+                                    <img src="Assets/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg"
+                                        alt="à la française">
+                                </div>
+                                <div class="text-card">
+                                    <div class="card-text">
+                                        <h3>À la française</h3>
+                                        <p>Cité rouge</p>
+                                    </div>
+                                    <div class="card-hearth">
+
+                                        <svg class="hearth" viewBox="0 0 512 512" width="20">
+                                            <path
+                                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                        </svg>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="délicesdessens.html">
+                            <div class="card">
+                                <div class="card-picture">
+                                    <img src="Assets/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg"
+                                        alt="le délice des sens">
+                                </div>
+                                <div class="text-card">
+                                    <div class="card-text">
+                                        <h3>Le délices des sens</h3>
+                                        <p>Folie-Méricourt</p>
+                                    </div>
+                                    <div class="card-hearth">
+                                        <svg class="hearth" viewBox="0 0 512 512" width="20">
+                                            <path
+                                                d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
+        </main>
         <footer>
             <div class="container-footer">
                 <h4>ohmyfood</h4>
@@ -179,10 +175,15 @@
                     <i class="fa-solid fa-handshake-angle"></i>
                     <p>Devenir partenaire</p>
                 </a>
-                <a href="#"><p>Mentions légales</p></a>
-                <a href="mailto:noreply@ohmyfood.com"><p>Contact</p></a>
+                <a href="#">
+                    <p>Mentions légales</p>
+                </a>
+                <a href="mailto:noreply@ohmyfood.com">
+                    <p>Contact</p>
+                </a>
             </div>
         </footer>
     </div>
 </body>
+
 </html>
