@@ -13,7 +13,7 @@ $degrade: linear-gradient(169deg, rgba(236,27,190,1) 0%, rgba(147,86,220.1,1) 10
     display :flex;
     justify-content:center;
     align-items:center;
-    height:120vh;
+    height:0vh;
     width: 100%;
     background: #cf88ff;
     animation:opacity-o 10s forwards;
@@ -34,22 +34,23 @@ $degrade: linear-gradient(169deg, rgba(236,27,190,1) 0%, rgba(147,86,220.1,1) 10
 @keyframes opacity-o{
     0%{
       opacity:1;
-      display: flex;
+      visibility: visible;
+      height: 120vh;
       
       
     }
     50%{
       opacity:1;
-      display: flex;
+      visibility: visible;
       height: 120vh;
       
       
     }
     100%{
       opacity:0;
-      display: none;
-    height: 0vh;
-      
+      visibility: hidden;
+        height: 0vh;
+      left: 0;
     }
     
   }
@@ -68,6 +69,7 @@ $degrade: linear-gradient(169deg, rgba(236,27,190,1) 0%, rgba(147,86,220.1,1) 10
     }
     100%{
       transform:rotate(0deg);
+      
     }
     
   }
@@ -522,7 +524,7 @@ main{
         column-gap: 15px;
         width: 90%;
     }
-    a{
+    .a-card{
         width: 20%;
     }
     .card {   
@@ -823,7 +825,7 @@ footer{
 @media all and (min-width: 900px) {
     .card-menu:hover{
         .price{
-            padding-right:12% ;
+            padding-right:20% ;
         }
     }
 }
